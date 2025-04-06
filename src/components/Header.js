@@ -55,7 +55,7 @@ const Navbar = () => {
                 <span className="text-pink-700 initials">{getInitials(user.name)}</span>
                 <button
                   onClick={handleLogout}
-                  className="px-3 py-1 text-sm text-white hover:bg-gray-100 rounded-md"
+                  className="px-3 py-1 text-sm text-white hover:bg-pink-100 hover:bg-pink-700 rounded-md"
                 >
                   Logout
                 </button>
@@ -73,7 +73,7 @@ const Navbar = () => {
           <div className="flex items-center sm:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-pink-100 hover:text-pink-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? (
@@ -92,28 +92,28 @@ const Navbar = () => {
           <div className="pt-2 pb-3 space-y-1">
             <Link
               to="/"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
+              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/trends"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
+              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
               Trends
             </Link>
             <Link
               to="/settings"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
+              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
               Settings
             </Link>
             {user ? (
               <>
-                <div className="block pl-3 pr-4 py-2 text-base font-medium text-gray-600">
+                <div className="block pl-3 pr-4 py-2 text-base font-medium text-white">
                   Signed in as {user.name}
                 </div>
                 <button
@@ -121,7 +121,7 @@ const Navbar = () => {
                     handleLogout();
                     setIsMenuOpen(false);
                   }}
-                  className="block w-full text-left pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
+                  className="block w-full text-left pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
                 >
                   Logout
                 </button>
@@ -129,7 +129,7 @@ const Navbar = () => {
             ) : (
               <Link
                 to="/login"
-                className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
+                className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Login / Sign Up
