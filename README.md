@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+# TechStream
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TechStream is a modern React application for monitoring tech news and system metrics in real-time. It provides users with a personalized dashboard experience, real-time charts, and curated tech news from various categories.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Authentication**: Simple login system with local storage persistence
+- **Real-time Monitoring**: Dynamic charts showing system metrics (CPU, Memory, Network, Storage)
+- **Tech News Feed**: Curated news articles from various tech categories
+- **Customizable Dashboard**: Drag-and-drop favorites section for quick access
+- **Responsive Design**: Mobile-friendly layout with collapsible sidebar and navigation
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: Frontend UI library
+- **Redux Toolkit**: State management
+- **React Router**: Navigation and routing
+- **Recharts**: Interactive chart components
+- **React Beautiful DND**: Drag and drop functionality
+- **Tailwind CSS**: Utility-first CSS framework
+- **Lucide React**: Icon components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+src/
+|── __tests__/
+│   ├── Dashboard.test.js
+│   ├── FavoritiesSection.test.js
+│   ├── NewsPage.test.js
+├── components/
+│   ├── charts/
+│   │   └── RealTimeChart.js
+│   ├── FavoritesSection.js
+│   ├── Header.js
+│   ├── Navbar.js
+│   └── Sidebar.js
+├── pages/
+│   ├── Dashboard.js
+│   ├── LoginPage.js
+│   ├── NewsPage.js
+│   └── SettingsPage.js
+├── store/
+│   ├── index.js
+│   └── slices/
+│       ├── authSlice.js
+│       ├── dashboardSlice.js
+│       └── newsSlice.js
+├── App.css
+├── App.js
+└── index.js
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup and Installation
 
-### `npm run build`
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/techstream.git
+cd techstream
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Start the development server
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Build for production
+```bash
+npm run build
+```
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Authentication
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application includes a simple authentication system. Users need to register/login with:
+- Name
+- Email
+- Password (minimum 6 characters)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+User data is persisted in localStorage for session management.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Dashboard
 
-## Learn More
+The main dashboard displays:
+- Customizable favorites section with drag-and-drop functionality
+- Real-time monitoring charts for system metrics
+- Featured news articles from the tech world
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### News Page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Browse and filter tech news by categories:
+- All categories
+- People (tech personalities)
+- Frontend development
+- Podcasts
+- IT Security
 
-### Code Splitting
+### Settings
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Configure application settings:
+- Manage dashboard widgets
+- Add/remove items from favorites
+- Customize news preferences
+- Set update frequencies
 
-### Analyzing the Bundle Size
+## State Management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The application uses Redux Toolkit with three main slices:
 
-### Making a Progressive Web App
+### Auth Slice
+Manages user authentication state with login/logout functionality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Dashboard Slice
+Handles dashboard widgets, chart data, and favorites management.
 
-### Advanced Configuration
+### News Slice
+Manages news articles, categories, and filtering.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Responsive Design
 
-### Deployment
+TechStream is fully responsive with:
+- Desktop view: Full sidebar and dashboard layout
+- Mobile view: Collapsible navigation and stacked content
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Future Enhancements
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- User profile management
+- Dark mode support
+- News article bookmarking
+- Push notifications for breaking news
+- Additional chart types and customization options
+- Backend integration for real data
